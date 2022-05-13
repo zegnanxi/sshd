@@ -1,0 +1,24 @@
+target/
+Servers/
+.metadata/
+.recommenders/
+.settings/
+RemoteSystemsTempFiles/
+.classpath
+.project
+.checkstyle
+.eclipse-pmd
+.pmd
+*.iml
+*.ipr
+*.iws
+.idea
+.springBeans
+.externalToolBuilders
+
+# Serialized objects
+*.ser
+
+# Locks and temporary files
+*~
+.attach_pid*
