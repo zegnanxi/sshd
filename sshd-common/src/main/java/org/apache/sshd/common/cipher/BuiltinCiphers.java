@@ -58,18 +58,6 @@ public enum BuiltinCiphers implements CipherFactory {
     aes192ctr(Constants.AES192_CTR, 16, 24, "AES", 192, "AES/CTR/NoPadding", 16),
     aes256cbc(Constants.AES256_CBC, 16, 32, "AES", 256, "AES/CBC/NoPadding", 16),
     aes256ctr(Constants.AES256_CTR, 16, 32, "AES", 256, "AES/CTR/NoPadding", 16),
-    arcfour128(Constants.ARCFOUR128, 8, 16, "ARCFOUR", 128, "RC4", 16) {
-        @Override
-        public Cipher create() {
-            return new BaseRC4Cipher(getIVSize(), getKdfSize(), getKeySize(), getCipherBlockSize());
-        }
-    },
-    arcfour256(Constants.ARCFOUR256, 8, 32, "ARCFOUR", 256, "RC4", 32) {
-        @Override
-        public Cipher create() {
-            return new BaseRC4Cipher(getIVSize(), getKdfSize(), getKeySize(), getCipherBlockSize());
-        }
-    },
     blowfishcbc(Constants.BLOWFISH_CBC, 8, 16, "Blowfish", 128, "Blowfish/CBC/NoPadding", 8),
     tripledescbc(Constants.TRIPLE_DES_CBC, 8, 24, "DESede", 192, "DESede/CBC/NoPadding", 8);
 
