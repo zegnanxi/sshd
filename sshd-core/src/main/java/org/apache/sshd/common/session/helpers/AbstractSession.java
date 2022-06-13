@@ -1693,19 +1693,21 @@ public abstract class AbstractSession extends SessionHelper {
     }
 
     protected boolean isRekeyRequired() {
-        if ((!isOpen()) || isClosing() || isClosed()) {
-            return false;
-        }
-
-        KexState curState = kexState.get();
-        if (!KexState.DONE.equals(curState)) {
-            return false;
-        }
-
-        return isRekeyTimeIntervalExceeded()
-            || isRekeyPacketCountsExceeded()
-            || isRekeyBlocksCountExceeded()
-            || isRekeyDataSizeExceeded();
+//        log.info("znx disable rekey.");
+        return false;
+//        if ((!isOpen()) || isClosing() || isClosed()) {
+//            return false;
+//        }
+//
+//        KexState curState = kexState.get();
+//        if (!KexState.DONE.equals(curState)) {
+//            return false;
+//        }
+//
+//        return isRekeyTimeIntervalExceeded()
+//            || isRekeyPacketCountsExceeded()
+//            || isRekeyBlocksCountExceeded()
+//            || isRekeyDataSizeExceeded();
     }
 
     protected boolean isRekeyTimeIntervalExceeded() {
