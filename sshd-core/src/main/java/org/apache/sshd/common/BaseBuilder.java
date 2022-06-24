@@ -75,8 +75,6 @@ public class BaseBuilder<T extends AbstractFactoryManager, S extends BaseBuilder
                 BuiltinCiphers.aes192ctr,
                 BuiltinCiphers.aes256ctr,
                 BuiltinCiphers.aes128cbc,
-                BuiltinCiphers.tripledescbc,
-                BuiltinCiphers.blowfishcbc,
                 // TODO add support for cast128-cbc cipher
                 BuiltinCiphers.aes192cbc,
                 BuiltinCiphers.aes256cbc

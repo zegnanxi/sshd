@@ -57,9 +57,7 @@ public enum BuiltinCiphers implements CipherFactory {
     aes192cbc(Constants.AES192_CBC, 16, 24, "AES", 192, "AES/CBC/NoPadding", 16),
     aes192ctr(Constants.AES192_CTR, 16, 24, "AES", 192, "AES/CTR/NoPadding", 16),
     aes256cbc(Constants.AES256_CBC, 16, 32, "AES", 256, "AES/CBC/NoPadding", 16),
-    aes256ctr(Constants.AES256_CTR, 16, 32, "AES", 256, "AES/CTR/NoPadding", 16),
-    blowfishcbc(Constants.BLOWFISH_CBC, 8, 16, "Blowfish", 128, "Blowfish/CBC/NoPadding", 8),
-    tripledescbc(Constants.TRIPLE_DES_CBC, 8, 24, "DESede", 192, "DESede/CBC/NoPadding", 8);
+    aes256ctr(Constants.AES256_CTR, 16, 32, "AES", 256, "AES/CTR/NoPadding", 16);
 
     public static final Set<BuiltinCiphers> VALUES =
         Collections.unmodifiableSet(EnumSet.allOf(BuiltinCiphers.class));
